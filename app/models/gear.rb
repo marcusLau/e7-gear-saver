@@ -1,6 +1,6 @@
-class Ride < ActiveRecord::Base
+class Gear < ActiveRecord::Base
   belongs_to :user
-  belongs_to :attraction
+  belongs_to :categories
 
   def take_ride
     if missing_tickets && too_short

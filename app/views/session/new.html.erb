@@ -1,8 +1,7 @@
 <h1>Sign In</h1>
 <%= form_tag("/signin", method: "post") do %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <p>Select a User:</p>
-  <%= collection_select(:user, :name, User.all, :name, :name) %><br />
+  <p>Select a User:<%= collection_select(:user, :username, User.all, :username, :username) %><br /></p>
   <p>Password: <%= password_field_tag :password %></p>
   <%= submit_tag "Sign In" %>
 <% end %>

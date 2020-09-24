@@ -1,4 +1,4 @@
-class CreateGears < ActiveRecord::Migration[5.1]
+class CreateGears < ActiveRecord::Migration[5.2]
   def change
     create_table :gears do |t|
       t.integer :level
@@ -15,7 +15,7 @@ class CreateGears < ActiveRecord::Migration[5.1]
 
       t.string :stat_3
       t.integer :stat_3_per
-
+      
       t.string :stat_4
       t.integer :stat_4_per
 

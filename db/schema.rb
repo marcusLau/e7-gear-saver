@@ -10,6 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_09_24_230026) do
+
+  create_table "categories", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "gear_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gears", force: :cascade do |t|
+    t.integer "level"
+    t.string "rarity"
+    t.string "type"
+    t.string "main_stat"
+    t.integer "enhance_lvl"
+    t.string "stat_1"
+    t.integer "stat_1_per"
+    t.string "stat_2"
+    t.integer "stat_2_per"
+    t.string "stat_3"
+    t.integer "stat_3_per"
+    t.string "stat_4"
+    t.integer "stat_4_per"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

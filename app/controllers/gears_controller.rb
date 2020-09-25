@@ -2,6 +2,7 @@ class GearsController < ApplicationController
     # before_action :find_gear, only: [:show, :edit, :update]
 
     def index
+        # @gears = current_user.gears.all
         @gears = Gear.all
     end
 

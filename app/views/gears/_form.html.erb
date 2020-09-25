@@ -1,0 +1,38 @@
+<%= form_for @gear do |s| %>
+    <%= s.label :level %>
+    <%= s.number_field :level %><br>
+
+    <%= s.label :rarity %>
+    <%= s.text_field :rarity %><br>
+
+    <%= s.label :equip %>
+    <%= s.text_field :equip %><br>
+
+    <%= s.label :main_stat %>
+    <%= s.text_field :main_stat %><br>
+
+    <%= s.label :enhance_lvl %>
+    <%= s.number_field :enhance_lvl %><br>
+
+    <%= s.label :stat_1 %>
+    <%= s.text_field :stat_1%>
+    <%= s.label :stat_1_per %>
+    <%= s.number_field :stat_1_per %><br>
+
+    <%= s.label :stat_2 %>
+    <%= s.text_field :stat_2 %>
+    <%= s.label :stat_2_per %>
+    <%= s.number_field :stat_2_per %><br>
+
+    <%= s.label :stat_3 %>
+    <%= s.text_field :stat_3 %>
+    <%= s.label :stat_3_per %>
+    <%= s.number_field :stat_3_per %><br>
+
+    <%= s.label :stat_4 %>
+    <%= s.text_field :stat_4 %>
+    <%= s.label :stat_4_per %>
+    <%= s.number_field :stat_4_per %><br>
+
+    <%= s.submit %>
+<% end %>

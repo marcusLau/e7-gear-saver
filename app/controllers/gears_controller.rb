@@ -1,8 +1,8 @@
 class GearsController < ApplicationController
-    before_action :find_gear, only: [:show, :edit, :update]
+    # before_action :find_gear, only: [:show, :edit, :update]
 
     def index
-        @gears = Gears.all
+        @gears = Gear.all
     end
 
     def new
@@ -11,7 +11,8 @@ class GearsController < ApplicationController
 
     def create
         @gear = Gear.create(gear_params)
-        if @gear.valid?
+        if @gear
+            @gear.save!
             redirect_to gear_path(@gear) # gears/show.html.erb 
         else
             render :new
@@ -19,6 +20,7 @@ class GearsController < ApplicationController
     end
 
     def show
+        @gear = Gear.find_by(:id => params[:id])
     end
 
     def edit

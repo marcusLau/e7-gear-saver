@@ -1,6 +1,6 @@
 class Gear < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :categories
+  belongs_to :user, optional: true
+  belongs_to :categories, optional: true
 
   def take_ride
     if missing_tickets && too_short

@@ -1,9 +1,9 @@
   
-<h1><%= @gear.rarity @gear.equip %></h1>
+<h1><%= @gear.rarity %>: <%= @gear.equip %></h1>
 
-<h3>Main Stat: <%= @gear.main_stat %></h3>
-<p>Substat 1: <%= @gear.stat_1 @gear.stat_1_per %></p>
-<p>Substat 2: <%= @gear.stat_2 @gear.stat_2_per %></p>
-<p>Substat 3: <%= @gear.stat_3 @gear.stat_3_per %></p>
-<p>Substat 4: <%= @gear.stat_4 @gear.stat_4_per %></p>
+<h2>Main Stat: <%= @gear.main_stat %></h3>
+<p>Substat 1: <%= @gear.stat_1 %> - <%=@gear.stat_1_per %></p>
+<p>Substat 2: <%= @gear.stat_2 %> - <%=@gear.stat_2_per %></p>
+<p>Substat 3: <%= @gear.stat_3 %> - <%=@gear.stat_3_per %></p>
+<p>Substat 4: <%= @gear.stat_4 %> - <%=@gear.stat_4_per %></p>
 

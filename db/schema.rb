@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_230026) do
   create_table "gears", force: :cascade do |t|
     t.integer "level"
     t.string "rarity"
-    t.string "type"
+    t.string "equip"
     t.string "main_stat"
     t.integer "enhance_lvl"
     t.string "stat_1"

@@ -3,7 +3,7 @@ class CreateGears < ActiveRecord::Migration[5.2]
     create_table :gears do |t|
       t.integer :level
       t.string :rarity
-      t.string :type
+      t.string :equip
       t.string :main_stat
       t.integer :enhance_lvl
 

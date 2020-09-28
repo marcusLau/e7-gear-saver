@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_230026) do
   create_table "categories", force: :cascade do |t|
     t.integer "user_id"
     t.integer "gear_id"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,8 +34,6 @@ ActiveRecord::Schema.define(version: 2020_09_24_230026) do
     t.integer "stat_3_per"
     t.string "stat_4"
     t.integer "stat_4_per"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

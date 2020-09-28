@@ -6,6 +6,6 @@ class Gear < ActiveRecord::Base
   validates :enhance_lvl, presence: true
 
   belongs_to :user, optional: true
-  belongs_to :comments, optional: true
+  has_many :comments
 
 end

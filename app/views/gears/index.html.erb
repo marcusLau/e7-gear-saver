@@ -1,6 +1,9 @@
-  <h1>Gears by <%= current_user.username %></h1>
+  <h1>Gear Index Page </h1>
+
+<br>
 
 <% @gears.each do |g| %> 
     <li><%= link_to "Show more details for #{g.rarity} #{g.equip}." , gear_path(g) %></li>
+    <p>Created by <%= current_user.username %></p>
 <% end %>
   

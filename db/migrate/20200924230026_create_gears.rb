@@ -19,6 +19,7 @@ class CreateGears < ActiveRecord::Migration[5.2]
       t.string :stat_4
       t.integer :stat_4_per
 
+      t.integer :user_id
     end
   end
 end

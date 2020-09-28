@@ -1,8 +1,9 @@
-class Comments < ApplicationRecord
-  validates :user_id, presence: true
-  validates :gear_id, presence: true
-  validates :content, presence: true
+class Comment < ApplicationRecord
+    validates :user_id, presence: true
+    validates :gear_id, presence: true
+    validates :content, presence: true
 
-  has_many :gears
-  has_many :users, through: :gears
-end
+    belongs_to :gears
+    has_many :users, through: :gears
+  end
+  

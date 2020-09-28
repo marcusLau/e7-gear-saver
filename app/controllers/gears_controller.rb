@@ -3,8 +3,7 @@ class GearsController < ApplicationController
 
     # use Gear.where scope method here??
     def index 
-        @gears = current_user.gears.all
-        # @gears = Gear.all
+        @gears = Gear.all
     end
 
     def new
@@ -14,8 +13,9 @@ class GearsController < ApplicationController
     def create
         @gear = Gear.create(gear_params)
         if @gear
+            @gear.user_id = current_user.id 
             @gear.save!
-            redirect_to gear_path(@gear) # gears/show.html.erb 
+            redirect_to gear_path(@gear) # gears/:id/show.html 
         else
             render :new
         end

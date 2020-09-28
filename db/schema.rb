@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_230026) do
+ActiveRecord::Schema.define(version: 2020_09_28_050653) do
 
-  create_table "categories", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "gear_id"
     t.string "content"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_230026) do
     t.integer "stat_3_per"
     t.string "stat_4"
     t.integer "stat_4_per"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

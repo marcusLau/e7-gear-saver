@@ -1,7 +1,8 @@
 class GearsController < ApplicationController
     # before_action :find_gear, only: [:show, :edit, :update]
 
-    def index
+    # use Gear.where scope method here??
+    def index 
         @gears = current_user.gears.all
         # @gears = Gear.all
     end

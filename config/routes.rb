@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :gears, only: [:new, :create, :show, :index]
   resources :users, only: [:new, :create, :show]
+  resources :gears, only: [:new, :create, :show, :index] do 
+    resources :comments, only: [:index, :new, :show]
+  end
 
   root "static_pages#home"
 

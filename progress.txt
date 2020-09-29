@@ -76,7 +76,8 @@ Developing Plan:
 ----------------------------------------
 BUGS:
 
+- No route matches {:action=>"show", :controller=>"comments", :id=>nil}, missing required keys: [:id]
+	- when trying to add a new comment to a gear
 
 CURRENT STATUS:
-- working on creating a new comment and associating it to that specific gear 
-- display all comments for a specific gear
+- working on gear simulations

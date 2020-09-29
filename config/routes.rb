@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get '/auth/facebook/callback' => 'session#fb_create'
+
   resources :users, only: [:new, :create, :show]
   resources :gears, only: [:new, :create, :show, :index] do 
     resources :comments, only: [:index, :new, :show]
@@ -9,6 +12,8 @@ Rails.application.routes.draw do
 
   get '/signin', to: 'session#new'
   post '/signin', to: 'session#create'
+  
   delete '/session', to: 'session#destroy'
   post '/rides', to: 'rides#create'
+  
 end

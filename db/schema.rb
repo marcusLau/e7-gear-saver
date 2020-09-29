@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_050653) do
     t.integer "stat_3_per"
     t.string "stat_4"
     t.integer "stat_4_per"
+    
     t.integer "user_id"
   end
 

@@ -1,0 +1,9 @@
+<h1>Comment Index Page </h1>
+
+<br>
+
+<% @comments.each do |g| %> 
+    <p> <%= g.content %></p>
+    <p>Created by <%= g.user.username %></p>
+<% end %>
+  

@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
     validates :gear_id, presence: true
     validates :content, presence: true
 
-    belongs_to :gears
-    has_many :users, through: :gears
+    belongs_to :gear
+    belongs_to :user
   end
   

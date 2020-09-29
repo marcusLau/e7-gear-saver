@@ -12,6 +12,7 @@ class GearsController < ApplicationController
 
     def create
         @gear = Gear.create(gear_params)
+        @comment = Comment.new(gear_id: params[:gear_id])
         if @gear
             @gear.user_id = current_user.id 
             @gear.save!
@@ -23,6 +24,7 @@ class GearsController < ApplicationController
 
     def show
         @gear = Gear.find_by(:id => params[:id])
+        @comment = Comment.new
     end
 
     def edit

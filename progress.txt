@@ -1,0 +1,82 @@
+Data Models:
+
+User:
+	username
+	password
+
+	has_many :gears
+	has_many :categories through: :gears
+
+
+Gears: 
+	level
+	rarity
+	type - sword etc
+	main_stat 
+	enhancement_level 
+	stat_1
+		stat_1_per
+	stat_2
+		stat_2_p
+	stat_3
+		stat_3_p
+	stat_4
+		stat_4_p
+	
+	belongs_to :user
+	belongs_to :categories 
+
+
+Category: - DPS/TANK/DEBUFFER 
+	user_id
+	gear_id
+	equip_type
+
+	has_many :gears
+	has_many :users, through: gears
+	
+
+User Stories:
+
+Homepage on e7gearsim.com
+	guest visits site
+	wants to do a gear simulation
+	so i can have fun rolling gears
+
+User Sign-up: e7gearsim.com/users/new
+	as a guest
+	wants to signup
+	to simulate my gear
+
+create Gear: e7gearsim.com/gear/new
+	as an user
+	want to create a gear
+	to do rolling simulations on
+
+view Gear: e7gearsim.com/gear # gear index
+	as an user
+	want to view all gear created by me
+	can see my resultant gears
+
+simulate Gear: e7gearsim.com/gear/:id/sim
+	as an user
+	want to simulate gear rolls
+	to have fun rolling gear
+
+
+Developing Plan:
+
+1. user signup/signin x 
+2. create equips and save into db x 
+3. associate created equips with creating user x
+4. develop gear index page for all equips x 
+5. allow different users to comment on equips 
+6. develop simulation system +3
+
+----------------------------------------
+BUGS:
+
+
+CURRENT STATUS:
+- working on creating a new comment and associating it to that specific gear 
+- display all comments for a specific gear

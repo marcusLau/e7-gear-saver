@@ -7,4 +7,10 @@
 <p>Substat 3: <%= @gear.stat_3 %> - <%=@gear.stat_3_per %></p>
 <p>Substat 4: <%= @gear.stat_4 %> - <%=@gear.stat_4_per %></p>
 
+<ul>
+<%= @gear.comments.each do |c| %>
+    <li> <%= c.content %></li> 
+<% end %>
+</ul>
+
 <%= link_to "Add New Comment", new_gear_comment_path(@gear, @comment)%>

@@ -1,6 +1,6 @@
 <h2>Create a new Comment</h2>
 
-<%= form_for @comment do |c| %>
+<%= form_for [@gear, @comment] do |c| %>
 
     <%= c.label :content %>
     <%= c.text_field :content %><br>

@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
   resources :gears, only: [:new, :create, :show, :index] do 
-    resources :comments, only: [:index, :new, :show]
+    resources :comments
   end
-  resources :comments
+  # resources :comments
 
   root "static_pages#home"
 

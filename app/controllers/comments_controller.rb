@@ -5,15 +5,18 @@ class CommentsController < ApplicationController
     end
 
     def new 
-        @comment = Comment.new(gear_id: params[:gear_id])
+        @comment = Comment.new
+        @gear = Gear.find_by(id: params[:gear_id])
+        # @comment = Comment.find_by(params[:gear_id])
     end
 
     def create 
-        @comment = Comment.create(comment_params) 
-        if @comment
-            @comment.user = current_user
-            @comment.save 
-            redirect_to comment_path(@comment) 
+        @gear = Gear.find_by(id: params[:gear_id])
+        @comment = @gear.comments.new(comment_params) # instiantes a comment with that gear id
+        @comment.user = current_user
+        # binding.pry
+        if @comment.save
+            redirect_to gear_comment_path(@gear, @comment) 
         else
             render :new 
         end

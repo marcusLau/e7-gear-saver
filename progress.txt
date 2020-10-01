@@ -85,17 +85,13 @@ TODO LIST:
 
 
 Nice to Have: ~
-- drop down selector for main stat
-	- limit a substat from options ONCE it is picked already
 
 ----------------------------------------
 BUGS:
 
 - comment/gear has extra infomation appended
 
-- facebook omniauth has strange error
-
-- do a drop-down selector that limits options based of off a previous selected option
+- cant do double form with @stats thing
 
 ----------------------------------------
 

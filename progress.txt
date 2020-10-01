@@ -70,14 +70,16 @@ Developing Plan:
 2. create equips and save into db x 
 3. associate created equips with creating user x
 4. develop gear index page for all equips x 
-5. allow different users to comment on equips 
+5. allow different users to comment on equips x
 6. develop simulation system +3
 
 ----------------------------------------
 BUGS:
 
-- No route matches {:action=>"show", :controller=>"comments", :id=>nil}, missing required keys: [:id]
-	- when trying to add a new comment to a gear
+- comment has extra infomation appended
+
+- facebook omniauth has strange error
+
 
 CURRENT STATUS:
 - working on gear simulations

@@ -1,7 +1,7 @@
 class GearsController < ApplicationController
     # before_action :find_gear, only: [:show, :edit, :update]
 
-    # use Gear.where scope method here??
+    # show ALL gear created
     def index 
         @gears = Gear.all
     end

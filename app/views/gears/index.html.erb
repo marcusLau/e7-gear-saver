@@ -4,6 +4,6 @@
 
 <% @gears.each do |g| %> 
     <li><%= link_to "Show more details for #{g.rarity} #{g.equip}." , gear_path(g) %></li>
-    <p>Created by <%= current_user.username %></p>
+    <p>Created by <%= User.where(id: g.user_id)[0].username %></p>
 <% end %>
   

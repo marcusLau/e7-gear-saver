@@ -71,7 +71,8 @@ Developing Plan:
 3. associate created equips with creating user x
 4. develop gear index page for all equips x 
 5. allow different users to comment on equips x
-6. develop simulation system +3
+6. develop simulation system +3 
+7. Add links at top to: Gear index Page (shows ALL gears + who made), User Page (shows all created gears by user)
 
 ----------------------------------------
 BUGS:
@@ -79,6 +80,9 @@ BUGS:
 - comment has extra infomation appended
 
 - facebook omniauth has strange error
+
+- If NOT logged in, gear page should not display any information about gears
+	- should say please log-in in order to view/create gears
 
 
 CURRENT STATUS:

@@ -9,15 +9,17 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       session[:user_id] = @user.id
-      redirect_to user_path(@user) # this works and redirects me to the show page of created user
-      # but for gear it has an error and there exists no :id when creating? 
+      redirect_to user_path(@user) 
     else
       render :new
     end
   end
 
+  # only shows gears created by USER
   def show
     @user = User.find_by(:id => params[:id])
+    # binding.pry
+    @gears = Gear.where(user_id: current_user.id) # find all Gear who has user_id = @user.id
   end
 
   private

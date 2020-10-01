@@ -1,37 +1,37 @@
 <%= form_for @gear do |s| %>
 
     <%= s.label :level %>
-    <%= s.number_field :level %><br>
+    <%= s.select :level, ['15', '30', '45', '70', '85', '90'] %> <br>
 
     <%= s.label :rarity %>
-    <%= s.text_field :rarity %><br>
+    <%= s.select :rarity, ['Normal', 'Good', 'Rare', 'Heroic', 'Epic'] %> <br>
 
     <%= s.label :equip %>
-    <%= s.text_field :equip %><br>
+    <%= s.select :equip, ['Weapon', 'Helm', 'Armor', 'Necklace', 'Ring', 'Boots'] %> <br>
 
     <%= s.label :main_stat %>
-    <%= s.text_field :main_stat %><br>
+    <%= s.text_field :main_stat %> <br>
 
     <%= s.label :enhance_lvl %>
-    <%= s.number_field :enhance_lvl %><br>
+    <%= s.select :enhance_lvl, ['0', '3', '6', '9', '12', '15'] %> <br>
 
     <%= s.label :stat_1 %>
-    <%= s.text_field :stat_1%>
+    <%= s.select :stat_1, Gear.substats %>
     <%= s.label :stat_1_per %>
     <%= s.number_field :stat_1_per %><br>
 
     <%= s.label :stat_2 %>
-    <%= s.text_field :stat_2 %>
+    <%= s.select :stat_2, Gear.substats %>
     <%= s.label :stat_2_per %>
     <%= s.number_field :stat_2_per %><br>
 
     <%= s.label :stat_3 %>
-    <%= s.text_field :stat_3 %>
+    <%= s.select :stat_3, Gear.substats %>
     <%= s.label :stat_3_per %>
     <%= s.number_field :stat_3_per %><br>
 
     <%= s.label :stat_4 %>
-    <%= s.text_field :stat_4 %>
+    <%= s.select :stat_4, Gear.substats %>
     <%= s.label :stat_4_per %>
     <%= s.number_field :stat_4_per %><br>
 

@@ -94,4 +94,9 @@ BUGS:
 
 - facebook omniauth has strange error
 
-DONE: 
+- how to limit select options
+
+
+----------------------------------------
+
+<!-- <%= s.select :main_stat, Gear.check_main(:equip) %><br> -->

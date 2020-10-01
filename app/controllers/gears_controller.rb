@@ -23,23 +23,23 @@ class GearsController < ApplicationController
     end
 
     def show
-        @gear = Gear.find_by(:id => params[:id])
+        @gear = find_gear
         @comment = Comment.new
     end
 
     def edit
-        @gear = Gear.find(params[:id])
+        @gear = find_gear
     end
 
     def destroy
-        @gear = Gear.find(params[:id])
+        @gear = find_gear
         @gear.destroy
         redirect_to gears_path
     end
 
     def update
         # raise params.inspect 
-        @gear = Gear.find(params[:id])
+        @gear = find_gear
         if @gear.update(gear_params)
             redirect_to gear_path(@gear)
         else

@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
         @comment.user = current_user
         # binding.pry
         if @comment.save
-            redirect_to gear_comment_path(@gear, @comment) 
+            redirect_to gear_path(@gear)
         else
             render :new 
         end

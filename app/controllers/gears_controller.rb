@@ -31,6 +31,12 @@ class GearsController < ApplicationController
         @gear = Gear.find(params[:id])
     end
 
+    def destroy
+        @gear = Gear.find(params[:id])
+        @gear.destroy
+        redirect_to gears_path
+    end
+
     def update
         # raise params.inspect 
         @gear = Gear.find(params[:id])

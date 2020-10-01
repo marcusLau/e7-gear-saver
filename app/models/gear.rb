@@ -29,6 +29,6 @@ class Gear < ActiveRecord::Base
     when 'Boots'
       ['Speed', 'Attack', 'Attack %', 'Health', 'Health %', 'Defense', 'Defense %']
     end
-    # binding.pry
+    #binding.pry
   end
 end

@@ -85,7 +85,8 @@ TODO LIST:
 
 
 Nice to Have: ~
-- drop down selector for level, rarity, equip, main stat, enhancement lvl
+- drop down selector for main stat
+	- limit a substat from options ONCE it is picked already
 
 ----------------------------------------
 BUGS:
@@ -94,8 +95,7 @@ BUGS:
 
 - facebook omniauth has strange error
 
-- how to limit select options
-
+- do a drop-down selector that limits options based of off a previous selected option
 
 ----------------------------------------
 

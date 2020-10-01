@@ -7,10 +7,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def self.find_or_create_by_facebook(auth)
-    find_or_create_by(uid: auth['uid']) do |u|
-      u.name = auth['info']['name']
-      u.email = auth['info']['email']
-      u.image = auth['info']['image']
+    find_or_create_by(username: auth['info']['name']) do |u|
       u.password = SecureRandom.hex(21) 
     end
   end

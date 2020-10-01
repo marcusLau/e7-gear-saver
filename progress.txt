@@ -77,13 +77,14 @@ Developing Plan:
 
 TODO LIST:
 - simulation system
+
 - user show page should list prominent equip info and link_to x 
 - Gear index page should list prominent equip info and link_to and made to look nicer x
-- Refactor CSS for gear/new 
-- EDIT/UPDATE/DELETE for gear
+- Refactor CSS for gear/new x
+- EDIT/UPDATE/DELETE for gear X
 
 
-Nice to Have:
+Nice to Have: ~
 - drop down selector for level, rarity, equip, main stat, enhancement lvl
 
 ----------------------------------------
@@ -91,5 +92,6 @@ BUGS:
 
 - comment/gear has extra infomation appended
 
-
 - facebook omniauth has strange error
+
+DONE: 

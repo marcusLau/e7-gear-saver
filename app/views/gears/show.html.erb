@@ -1,5 +1,5 @@
   
-<h1><%= @gear.rarity %>: <%= @gear.equip %></h1>
+<h1><%= @gear.rarity %> <%= @gear.equip %></h1>
 
 <h2>Main Stat: <%= @gear.main_stat %></h3>
 <p>Substat 1: <%= @gear.stat_1 %> - <%=@gear.stat_1_per %></p>
@@ -7,6 +7,10 @@
 <p>Substat 3: <%= @gear.stat_3 %> - <%=@gear.stat_3_per %></p>
 <p>Substat 4: <%= @gear.stat_4 %> - <%=@gear.stat_4_per %></p>
 
+<%= link_to "Edit Gear", edit_gear_path(@gear) %>
+
+<br>
+<h3>Comments: </h3>
 <ul>
 <%= @gear.comments.each do |c| %>
     <li> <%= c.content %></li> 

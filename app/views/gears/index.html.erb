@@ -1,9 +1,9 @@
-  <h1>Gear Index Page </h1>
+<h1>Gear Index Page </h1>
 
 <br>
 
 <% @gears.each do |g| %> 
     <li><%= link_to "Show more details for #{g.rarity} #{g.equip}." , gear_path(g) %></li>
-    <p>Created by <%= User.where(id: g.user_id)[0].username %></p>
+    <p>Created by: <%= User.where(id: g.user_id)[0].username %></p>
 <% end %>
   

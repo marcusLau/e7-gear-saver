@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'session#fb_create'
 
   resources :users, only: [:new, :create, :show]
-  resources :gears, only: [:new, :create, :show, :index] do 
-    resources :comments
+  resources :gears do 
+    resources :comments, only: [:new, :create, :show]
   end
   # resources :comments
 

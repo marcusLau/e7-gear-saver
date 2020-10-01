@@ -1,11 +1,12 @@
 <h1>Welcome <%= @user.username %></h1>
 
-<%= link_to "See Gear", gears_path %>
-
 <br><br>
+<h3>Gears Created: </h3>
+<br>
 
 <ul>
 <%= @gears.each do |g| %>
-    <li><%= g.rarity %>: <%= g.equip %></li> <br>
+    <li><%= g.rarity %>: <%= g.equip %></li>
+    <p><%= link_to "Show more details for: #{g.rarity} #{g.equip}" , gear_path(g) %></p>
 <% end %>
 </ul>

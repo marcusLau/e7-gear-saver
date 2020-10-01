@@ -28,9 +28,17 @@ class GearsController < ApplicationController
     end
 
     def edit
+        @gear = Gear.find(params[:id])
     end
 
     def update
+        # raise params.inspect 
+        @gear = Gear.find(params[:id])
+        if @gear.update(gear_params)
+            redirect_to gear_path(@gear)
+        else
+            render :edit
+        end
     end
     
     private

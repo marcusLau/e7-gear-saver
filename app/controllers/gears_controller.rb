@@ -1,5 +1,5 @@
 class GearsController < ApplicationController
-    # before_action :find_gear, only: [:show, :edit, :update]
+    before_action :require_login
 
     # show ALL gear created
     def index 

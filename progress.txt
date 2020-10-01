@@ -77,12 +77,14 @@ Developing Plan:
 ----------------------------------------
 BUGS:
 
-- comment has extra infomation appended
+- comment/gear has extra infomation appended
 
 - facebook omniauth has strange error
 
-- If NOT logged in, gear page should not display any information about gears
-	- should say please log-in in order to view/create gears
+- If NOT logged in
+	- Gear/Create New Gear should not show if user is not logged in !!!! 
+	- should not allow non-signed in users to view gear index nor profiles of users
+		- before_action require_login function
 
 
 CURRENT STATUS:

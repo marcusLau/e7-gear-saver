@@ -7,6 +7,14 @@
 
 Epic Seven Gear Saver is an application for players to save their gear stats in one centralized location. The E7 Gear Saver allows you to create, save, and view gears created by you and your fellow friends.
 
+## How To Use?
+
+1. User visits site
+2. User may signup/signin
+3. Upon successful signin/signup user may create new gear.
+4. User may view and add comments to their own gear or other player's gears.
+5. User can edit/delete gears that they create.
+
 ## Installation
 
 Clone the source locally:

@@ -1,24 +1,42 @@
-# Rails Amusement Park
+# Epic Seven Gear Saver
 
-## Objectives
+<h1 align="center">
+  <br>
+  <img src="https://www.pngkit.com/png/full/769-7698436_epic-seven-logo-png.png" alt="Epic Seven">
+</h1>
 
-Get comfortable with using form helpers, having models interact with each other, and building out a simple sessions system.
+Epic Seven Gear Saver is an application for players to save their gear stats in one centralized location. The E7 Gear Saver allows you to create, save, and view gears created by you and your fellow friends.
 
-You're going to be building an amusement park. There will be users, attractions, and users can take rides on attractions.
+## Installation
 
-## Instructions
+Clone the source locally:
 
-- Check out [The Demo](https://flatiron-amusement-park.herokuapp.com/) to see where this lab is headed.
-- This is a test driven lab, check out the model tests and get those to pass before moving onto the feature specs.
-- Remember, if you use scaffolds or generators do **_not_** overwrite the model specs that are included in this lab. Always use the `--no-test-framework` flag and enter `n` or `no` when prompted to overwrite the model specs for this lab.
+```sh
+$ git clone https://github.com/marcusLau/e7-gear-saver.git
+$ cd e7-gear-saver
+```
 
-**A hint about requiring a password**: ActiveRecord comes with a handy `has_secure_password` attribute that you can set on a model. It requires that you enable the `bcrypt` gem and that you add a `password_digest` column to your model. You can read more about [`has_secure_password` here](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html).
+Install Project dependencies:
 
-## Resources
+```sh
+$ bundle install
+```
 
-- [Rails Generators](http://guides.rubyonrails.org/generators.html)
-- [Form Helpers](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html)
-- [Form Helpers Guide](http://guides.rubyonrails.org/form_helpers.html)
-- [Collection Select](http://stackoverflow.com/questions/8907867/can-someone-explain-collection-select-to-me-in-clear-simple-terms)
-- [Sessions in Rails](http://guides.rubyonrails.org/security.html#sessions)
-- [`has_secure_password`](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
+Start the application:
+
+```sh
+$ rails s
+```
+
+## Built with
+
+- Ruby
+- Ruby on Rails
+- ActiveRecord
+- SQLite
+- HTML
+- CSS
+
+## License
+
+MIT @ Marcus Lau

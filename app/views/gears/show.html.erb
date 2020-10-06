@@ -14,9 +14,11 @@
 <h3>Comments: </h3>
 <ul>
 <%= @gear.comments.each do |c| %>
-    <li> <%= c.content %></li> <br>
+    <li><%= c.content %></li> <br>
 <% end %>
-</ul><br>
+</ul>
+<br>
+
 
 <%= button_to "Add New Comment", new_gear_comment_path(@gear, @comment), :method => :get %> <br><br>
 

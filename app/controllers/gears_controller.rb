@@ -8,15 +8,9 @@ class GearsController < ApplicationController
 
     def new
         @gear = Gear.new
-        @stats = true
-        # check for params[:equip]
-        # renders first 3 params
-        # continue sends back to model
-        # dynamically renders 2nd part of the form which will have a dyanmically changed main_stat according to :equip
     end
 
     def create
-        @stats = true
         @gear = Gear.create(gear_params)
         @comment = Comment.new(gear_id: params[:gear_id])
         if @gear

@@ -1,4 +1,4 @@
-<%= form_for @gear, method: "#{@stats ? "post" : 'get'}" do |s| %>
+<%= form_for @gear do |s| %>
 
     <%= s.label :level %>
     <%= s.select :level, ['15', '30', '45', '70', '85', '90'] %> <br>
@@ -9,36 +9,43 @@
     <%= s.label :equip %>
     <%= s.select :equip, ['Weapon', 'Helm', 'Armor', 'Necklace', 'Ring', 'Boots'] %> <br>
 
-    <% if @stats %>
-
     <%= s.label :main_stat %>
-    <%= s.text_field :main_stat %> <br>
+    <%= s.select :main_stat, ['Attack', 'Attack %', 'Defense', 'Defense %', 'Health', 'Health %'] %> <br>
 
     <%= s.label :enhance_lvl %>
     <%= s.select :enhance_lvl, ['0', '3', '6', '9', '12', '15'] %> <br>
 
     <%= s.label :stat_1 %>
     <%= s.select :stat_1, Gear.substats %>
+    <%= 'field_with_errors' if @gear.errors[:stat_1_per].any? %>
     <%= s.label :stat_1_per %>
     <%= s.number_field :stat_1_per %><br>
 
     <%= s.label :stat_2 %>
     <%= s.select :stat_2, Gear.substats %>
+    <%= 'field_with_errors' if @gear.errors[:stat_2_per].any? %>
     <%= s.label :stat_2_per %>
     <%= s.number_field :stat_2_per %><br>
 
     <%= s.label :stat_3 %>
     <%= s.select :stat_3, Gear.substats %>
+    <%= 'field_with_errors' if @gear.errors[:stat_3_per].any? %>
     <%= s.label :stat_3_per %>
     <%= s.number_field :stat_3_per %><br>
 
     <%= s.label :stat_4 %>
     <%= s.select :stat_4, Gear.substats %>
+    <%= 'field_with_errors' if @gear.errors[:stat_4_per].any? %>
     <%= s.label :stat_4_per %>
     <%= s.number_field :stat_4_per %><br>
-    <%= s.submit %>
 
-    <% else %> 
-        <%= s.submit "continue" %>  
+    <% if @gear.errors.any? %>
+        <h2>There were some errors: </h2>
+        <ul>
+            <% @gear.errors.full_messages.each do |e| %>
+                <li><%= e %></li>
+            <% end %>
     <% end %>
+
+    <%= s.submit %>
 <% end %>

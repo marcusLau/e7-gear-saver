@@ -84,15 +84,19 @@ TODO LIST:
 - EDIT/UPDATE/DELETE for gear X
 
 
-Nice to Have: ~
+Nice to Have: 
+
+Simulation System:
+- user visits Show page for gear
+- clicks on Simulate gear
+	- 
+
+- e7 equipment rolling table
 
 ----------------------------------------
 BUGS:
 
 - comment/gear has extra infomation appended
 
-- cant do double form with @stats thing
-
 ----------------------------------------
 
-<!-- <%= s.select :main_stat, Gear.check_main(:equip) %><br> -->

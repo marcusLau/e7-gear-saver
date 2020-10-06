@@ -8,9 +8,6 @@
 <p>Substat 4 - <%= @gear.stat_4 %>: <%=@gear.stat_4_per %></p>
 
 <br>
-<%= button_to "Edit Gear", edit_gear_path(@gear), :method => :get%>
-
-<br>
 <h3>Comments: </h3>
 <ul>
 <%= @gear.comments.each do |c| %>
@@ -19,7 +16,9 @@
 </ul>
 <br>
 
-
 <%= button_to "Add New Comment", new_gear_comment_path(@gear, @comment), :method => :get %> <br><br>
 
-<%= button_to "Delete Gear", gear_path(@gear), :method => :delete %>
+<% if current_user.id == @gear.user_id %>
+    <%= button_to "Edit Gear", edit_gear_path(@gear), :method => :get%><br>
+    <%= button_to "Delete Gear", gear_path(@gear), :method => :delete %>
+<% end %>

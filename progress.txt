@@ -38,25 +38,36 @@ Category: - DPS/TANK/DEBUFFER
 
 User Stories:
 
-Homepage on e7gearsim.com
+Homepage on e7-gear-saver.com
 	guest visits site
-	wants to do a gear simulation
-	so i can have fun rolling gears
+	wants to save gears
+	to review gears more easily
 
-User Sign-up: e7gearsim.com/users/new
+User Sign-up: e7-gear-saver.com/users/new
 	as a guest
 	wants to signup
-	to simulate my gear
+	to save my gear
 
-create Gear: e7gearsim.com/gear/new
+create Gear: e7-gear-saver.com/gear/new
 	as an user
 	want to create a gear
-	to do rolling simulations on
+	for review and for others to view
 
-view Gear: e7gearsim.com/gear # gear index
+view Gear: e7-gear-saver.com/gear 
 	as an user
 	want to view all gear created by me
-	can see my resultant gears
+	to review saved gears
+
+edit Gear: e7-gear-saver.com/gear/:id/edit/:id
+	as an user
+	want to edit a gear created by me
+	to reflect new changes
+
+delete Gear: e7-gear-saver.com/gear/:id/delete
+	as an user
+	want to delete a gear created by me
+	to remove a saved gear
+
 
 simulate Gear: e7gearsim.com/gear/:id/sim
 	as an user

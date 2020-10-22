@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :require_login
 
+  add_flash_types :danger, :info, :warning, :success
+
   def current_user
     # The session[:user_id] has been set
     if session[:user_id].present?

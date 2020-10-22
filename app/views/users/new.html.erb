@@ -1,11 +1,22 @@
 <h1>Sign Up</h1>
+
 <%= form_for @user do |s| %>
+  <% if @user.errors.any? %>
+    <h3>Errors:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
   <%= s.label :username %>
   <%= s.text_field :username %><br />
 
   <%= s.label :password %>
   <%= s.password_field :password %><br>
   
+
   <%= s.submit %>
 <% end %>
 

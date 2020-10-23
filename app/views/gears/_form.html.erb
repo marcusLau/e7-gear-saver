@@ -1,4 +1,12 @@
 <%= form_for @gear do |s| %>
+    <% if @gear.errors.any? %>
+        <h4>There were some errors: </h2>
+        <ul>
+            <% @gear.errors.full_messages.each do |e| %>
+                <li><%= e %></li>
+            <% end %>
+            <br>
+    <% end %>
 
     <%= s.label :level %>
     <%= s.select :level, ['15', '30', '45', '70', '85', '90'] %> <br>
@@ -17,35 +25,23 @@
 
     <%= s.label :stat_1 %>
     <%= s.select :stat_1, Gear.substats %>
-    <%= 'field_with_errors' if @gear.errors[:stat_1_per].any? %>
     <%= s.label :stat_1_per %>
     <%= s.number_field :stat_1_per %><br>
 
     <%= s.label :stat_2 %>
     <%= s.select :stat_2, Gear.substats %>
-    <%= 'field_with_errors' if @gear.errors[:stat_2_per].any? %>
     <%= s.label :stat_2_per %>
     <%= s.number_field :stat_2_per %><br>
 
     <%= s.label :stat_3 %>
     <%= s.select :stat_3, Gear.substats %>
-    <%= 'field_with_errors' if @gear.errors[:stat_3_per].any? %>
     <%= s.label :stat_3_per %>
     <%= s.number_field :stat_3_per %><br>
 
     <%= s.label :stat_4 %>
     <%= s.select :stat_4, Gear.substats %>
-    <%= 'field_with_errors' if @gear.errors[:stat_4_per].any? %>
     <%= s.label :stat_4_per %>
     <%= s.number_field :stat_4_per %><br>
-
-    <% if @gear.errors.any? %>
-        <h2>There were some errors: </h2>
-        <ul>
-            <% @gear.errors.full_messages.each do |e| %>
-                <li><%= e %></li>
-            <% end %>
-    <% end %>
 
     <%= s.submit %>
 <% end %>

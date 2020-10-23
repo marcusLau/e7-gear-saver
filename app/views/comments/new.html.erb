@@ -2,6 +2,15 @@
 
 <%= form_for [@gear, @comment] do |c| %>
 
+   <% if @comment.errors.any? %>
+        <h4>There were some errors: </h2>
+        <ul>
+            <% @comment.errors.full_messages.each do |e| %>
+                <li><%= e %></li>
+            <% end %>
+            <br>
+    <% end %>
+
     <%= c.label :content %>
     <%= c.text_field :content %><br>
     <%= c.submit %>

@@ -15,7 +15,8 @@ class CommentsController < ApplicationController
         @comment = @gear.comments.new(comment_params) # instiantes a comment with that gear id
         @comment.user = current_user
         # binding.pry
-        if @comment.save
+        if @comment.valid?
+            @comment.save
             redirect_to gear_path(@gear)
         else
             render :new 

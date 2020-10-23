@@ -13,7 +13,7 @@ class GearsController < ApplicationController
     def create
         @gear = Gear.create(gear_params)
         @comment = Comment.new(gear_id: params[:gear_id])
-        if @gear
+        if @gear.valid?
             @gear.user_id = current_user.id 
             @gear.save!
             redirect_to gear_path(@gear) # gears/:id/show.html 

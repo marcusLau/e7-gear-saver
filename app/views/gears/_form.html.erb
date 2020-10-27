@@ -8,40 +8,58 @@
             <br>
     <% end %>
 
-    <%= s.label :level %>
-    <%= s.select :level, ['15', '30', '45', '70', '85', '90'] %> <br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:level].any? %>">
+        <%= s.label :level %>
+        <%= s.select :level, ['15', '30', '45', '70', '85', '90'] %> <br>
+    </div>
 
-    <%= s.label :rarity %>
-    <%= s.select :rarity, ['Normal', 'Good', 'Rare', 'Heroic', 'Epic'] %> <br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:rarity].any? %>">
+        <%= s.label :rarity %>
+        <%= s.select :rarity, ['Normal', 'Good', 'Rare', 'Heroic', 'Epic'] %> <br>
+    </div>
 
-    <%= s.label :equip %>
-    <%= s.select :equip, ['Weapon', 'Helm', 'Armor', 'Necklace', 'Ring', 'Boots'] %> <br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:equip].any? %>">
+        <%= s.label :equip %>
+        <%= s.select :equip, ['Weapon', 'Helm', 'Armor', 'Necklace', 'Ring', 'Boots'] %> <br>
+    </div>
 
-    <%= s.label :main_stat %>
-    <%= s.select :main_stat, ['Attack', 'Attack %', 'Defense', 'Defense %', 'Health', 'Health %'] %> <br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:main_stat].any? %>">
+        <%= s.label :main_stat %>
+        <%= s.select :main_stat, ['Attack', 'Attack %', 'Defense', 'Defense %', 'Health', 'Health %'] %> <br>
+    </div>
 
-    <%= s.label :enhance_lvl %>
-    <%= s.select :enhance_lvl, ['0', '3', '6', '9', '12', '15'] %> <br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:enhance_lvl].any? %>">
+        <%= s.label :enhance_lvl %>
+        <%= s.select :enhance_lvl, ['0', '3', '6', '9', '12', '15'] %> <br>
+    </div>
 
-    <%= s.label :stat_1 %>
-    <%= s.select :stat_1, Gear.substats %>
-    <%= s.label :stat_1_per %>
-    <%= s.number_field :stat_1_per %><br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:stat_1_per].any? %>">
+        <%= s.label :stat_1 %>
+        <%= s.select :stat_1, Gear.substats %>
+        <%= s.label :stat_1_per %>
+        <%= s.number_field :stat_1_per %><br>
+    </div>
 
-    <%= s.label :stat_2 %>
-    <%= s.select :stat_2, Gear.substats %>
-    <%= s.label :stat_2_per %>
-    <%= s.number_field :stat_2_per %><br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:stat_2_per].any? %>">
+        <%= s.label :stat_2 %>
+        <%= s.select :stat_2, Gear.substats %>
+        <%= s.label :stat_2_per %>
+        <%= s.number_field :stat_2_per %><br>
+    </div>
 
-    <%= s.label :stat_3 %>
-    <%= s.select :stat_3, Gear.substats %>
-    <%= s.label :stat_3_per %>
-    <%= s.number_field :stat_3_per %><br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:stat_3_per].any? %>">
+        <%= s.label :stat_3 %>
+        <%= s.select :stat_3, Gear.substats %>
+        <%= s.label :stat_3_per %>
+        <%= s.number_field :stat_3_per %><br>
+    </div>
 
-    <%= s.label :stat_4 %>
-    <%= s.select :stat_4, Gear.substats %>
-    <%= s.label :stat_4_per %>
-    <%= s.number_field :stat_4_per %><br>
+    <div class="field<%= ' field_with_errors' if @gear.errors[:stat_4_per].any? %>">
+        <%= s.label :stat_4 %>
+        <%= s.select :stat_4, Gear.substats %>
+        <%= s.label :stat_4_per %>
+        <%= s.number_field :stat_4_per %><br>
+    </div>
 
     <%= s.submit %>
 <% end %>

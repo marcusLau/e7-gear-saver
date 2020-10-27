@@ -12,7 +12,6 @@ class Gear < ActiveRecord::Base
   belongs_to :user, optional: true
   has_many :comments
 
-
   def self.substats
     options = ['Attack', 'Atk %', 'Health %', 'Defense', 'Defense %', 'Speed', 'Crit Chance %', 'Crit Damage %', 'Effectiveness %', 'Effectiveness Resist %'] 
   end

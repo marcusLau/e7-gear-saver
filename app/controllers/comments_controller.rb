@@ -24,7 +24,8 @@ class CommentsController < ApplicationController
     end 
 
     def show
-        @comment = Comment.find_by(id: params[:id])
+        @comment = Comment.where("id = ?", params[:id])
+        # @comment = Comment.find_by(id: params[:id])
     end
 
     private

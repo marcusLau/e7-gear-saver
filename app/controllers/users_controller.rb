@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(:id => params[:id])
     # binding.pry
-    @gears = Gear.where(user_id: current_user.id) # find all Gear who has user_id = @user.id
+    @gears = Gear.where("user_id = ?", current_user.id) # find all Gear who has user_id = @user.id
   end
 
   private
